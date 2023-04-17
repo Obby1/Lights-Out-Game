@@ -47,6 +47,7 @@ function Board({ nrows = 4, ncols = 4, chanceLightStartsOn = 0.25}) {
   }
 
   // TODO: check the board in state to determine whether the player has won.
+  // check if every cell is !cell (false). Returns true if so
   function hasWon() {
     return board.every(row => row.every(cell => !cell));
   }
